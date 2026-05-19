@@ -9,9 +9,9 @@
   },
   {
     "id": "2",
-    "name": "Salamt",
-    "email": "Salamat@gmail.com",
-    "password": "$2a$10$VzmsFr41YFJ2Md99lnA5IeNQvhe1Ipv7zqKY.LuGpK0nuUjRDaQKe",
+    "name": "Demo User",
+    "email": "user@gmail.com",
+    "password": "$2a$10$v.tjApOrciCaJc0leWvqkOlWrAHhkFmyy3LnbZUDhgWEzlJmz7oWq",
     "role": "user",
     "createdAt": "2026-05-07T07:01:55.441Z"
   }

@@ -33,6 +33,17 @@ export default function Login() {
         <p className="mt-5 text-center text-sm text-brand-muted">
           Hisobingiz yo'qmi? <Link to="/register" className="font-bold text-brand-orange">Ro'yxatdan o'ting</Link>
         </p>
+        <div className="mt-6 rounded-2xl bg-orange-50 p-4 text-sm text-brand-dark">
+          <p className="font-extrabold text-brand-orange">Demo loginlar</p>
+          <div className="mt-3 space-y-2">
+            <p>
+              <span className="font-bold">Admin:</span> admin@gmail.com / admin123
+            </p>
+            <p>
+              <span className="font-bold">Foydalanuvchi:</span> user@gmail.com / user123
+            </p>
+          </div>
+        </div>
       </form>
     </section>
   );
