@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: sardorbek-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        value: https://sardorbek.onrender.com
+
+  - type: web
+    name: sardorbek
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://sardorbek-api.onrender.com/api
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -60,6 +60,36 @@ npm run dev
 
 Frontend default port: `http://localhost:5173`
 
+## Renderga deploy qilish
+
+Loyiha Render uchun `render.yaml` bilan tayyorlandi. GitHub repo Renderga ulanganda ikkita servis ochiladi:
+
+- `sardorbek-api` - Express backend web service
+- `sardorbek` - React/Vite static site
+
+Render Dashboardda **New > Blueprint** tanlab shu repoga ulang. Render rootdagi `render.yaml` faylni o'qiydi va servislarni o'zi yaratadi.
+
+Backend sozlamalari:
+
+- Root Directory: `backend`
+- Build Command: `npm ci`
+- Start Command: `npm start`
+- Health Check Path: `/health`
+- Env: `JWT_SECRET` Render tomonidan avtomatik yaratiladi
+- Env: `CLIENT_URL=https://sardorbek.onrender.com`
+
+Frontend sozlamalari:
+
+- Root Directory: `frontend`
+- Build Command: `npm ci && npm run build`
+- Publish Directory: `dist`
+- Env: `VITE_API_URL=https://sardorbek-api.onrender.com/api`
+- Rewrite: `/* -> /index.html`
+
+Muhim: agar Render servis nomini bandligi sababli boshqa URL bersa, `CLIENT_URL` va `VITE_API_URL` qiymatlarini Dashboarddan yangi URLlarga moslab o'zgartiring.
+
+Backend hozir JSON fayllarga yozadi (`backend/data/*.json`). Render bepul web service filesystemi doimiy saqlash uchun mos emas, shuning uchun servis qayta deploy/restart bo'lsa yangi order/user o'zgarishlari yo'qolishi mumkin. Real production uchun database yoki Render Disk kerak bo'ladi.
+
 ## Admin login
 
 - Email: `admin@gmail.com`
