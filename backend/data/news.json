@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "title": "Sardor-Ekitob.uz — yangi kitob bozori!",
+    "description": "Platformamizda yangi elektron va audio kitoblar qo'shildi.",
+    "content": "Sardor-Ekitob.uz o'zbek kitobxonlari uchun elektron va audio kitoblarni bitta qulay platformada jamlaydi. Endi sevimli asarlaringizni qidirish, savatga qo'shish va tezkor buyurtma qilish yanada oson.",
+    "image": "https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "04.12.2025",
+    "time": "11:44"
+  },
+  {
+    "id": "2",
+    "title": "Audio kitoblar katalogi kengaydi",
+    "description": "Endi mashhur o'zbek adabiyoti audio formatda ham mavjud.",
+    "content": "Audio kitoblar bo'limiga yangi ovozlashtirilgan asarlar qo'shildi. Yo'lda, uyda yoki ish orasida kitob tinglashni yoqtiradiganlar uchun qulay tanlovlar tayyor.",
+    "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "07.12.2025",
+    "time": "09:20"
+  },
+  {
+    "id": "3",
+    "title": "Premium obuna sinov rejimida",
+    "description": "Premium foydalanuvchilar uchun maxsus chegirmalar ishga tushdi.",
+    "content": "Premium obuna orqali tanlangan elektron kitoblarga chegirmalar, tavsiya ro'yxatlari va yangi nashrlarga oldindan kirish imkoniyati yaratilmoqda.",
+    "image": "https://images.unsplash.com/photo-1553729784-e91953dec042?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "10.12.2025",
+    "time": "14:05"
+  },
+  {
+    "id": "4",
+    "title": "Bolalar adabiyoti haftaligi",
+    "description": "Bolalar uchun ertak va sarguzasht kitoblarida maxsus chegirmalar.",
+    "content": "Haftalik davomida bolalar adabiyoti turkumidagi mashhur kitoblar chegirma bilan taklif qilinadi. Ota-onalar uchun saralangan ro'yxatlar ham tayyorlandi.",
+    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "12.12.2025",
+    "time": "16:30"
+  },
+  {
+    "id": "5",
+    "title": "Yangi qidiruv tizimi qo'shildi",
+    "description": "Kitob, muallif va janr bo'yicha izlash yanada tezlashdi.",
+    "content": "Platformada qidiruv tajribasi yaxshilandi. Endi kitoblarni nomi, muallifi yoki kategoriyasi orqali topish mumkin.",
+    "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "15.12.2025",
+    "time": "10:10"
+  },
+  {
+    "id": "6",
+    "title": "Biznes kitoblar to'plami",
+    "description": "Tadbirkorlar va startaplar uchun saralangan kitoblar jamlandi.",
+    "content": "Moliyaviy savodxonlik, odatlar, startap va boshqaruv bo'yicha foydali kitoblar alohida to'plamga joylandi.",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "18.12.2025",
+    "time": "13:55"
+  },
+  {
+    "id": "7",
+    "title": "Mobil o'qish tajribasi yangilandi",
+    "description": "Responsive dizayn va qulay navigatsiya yaxshilandi.",
+    "content": "Mobil qurilmalarda sahifalar tezroq ochilishi, kartalar chiroyli joylashishi va savat bilan ishlash osonlashishi uchun dizayn yangilandi.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "20.12.2025",
+    "time": "18:12"
+  },
+  {
+    "id": "8",
+    "title": "Donat bo'limi ishga tushdi",
+    "description": "Kitobxonlik loyihasini qo'llab-quvvatlash imkoniyati yaratildi.",
+    "content": "Donat bo'limi orqali foydalanuvchilar platforma rivojiga hissa qo'shishi va yangi kitoblarni raqamlashtirish tashabbuslarini qo'llab-quvvatlashi mumkin.",
+    "image": "https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=900&q=80",
+    "category": "YANGILIKLAR",
+    "date": "22.12.2025",
+    "time": "12:40"
+  }
+]

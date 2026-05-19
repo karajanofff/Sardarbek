@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "userId": "2",
+    "items": [
+      {
+        "id": "4",
+        "title": "Ikki eshik orasi",
+        "price": 45000,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "1",
+        "title": "O'tkan kunlar",
+        "price": 42000,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80"
+      }
+    ],
+    "customer": {
+      "name": "Salamt",
+      "phone": "+998999599464",
+      "address": "11"
+    },
+    "paymentType": "Naqd",
+    "total": 129000,
+    "status": "yangi",
+    "createdAt": "2026-05-07T07:02:26.143Z"
+  }
+]

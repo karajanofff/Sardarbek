@@ -1,0 +1,13 @@
+
+> internet-kitob-dokoni-backend@1.0.0 dev
+> nodemon server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+Sardor-Ekitob.uz API http://localhost:5000 da ishga tushdi
+[0mGET /api/books [32m200[0m 2.826 ms - 5999[0m
+[0mGET / [32m200[0m 0.502 ms - 45[0m
+[0mGET /favicon.ico [33m404[0m 0.578 ms - 32[0m

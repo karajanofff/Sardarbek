@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "name": "Administrator",
+    "email": "admin@gmail.com",
+    "password": "$2a$10$ej34M4FuHdJV6Ri76IJlcOb2/dws8qTUwRTl5FEDk2OnNV5D74R5e",
+    "role": "admin",
+    "createdAt": "2026-01-01T09:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "Salamt",
+    "email": "Salamat@gmail.com",
+    "password": "$2a$10$VzmsFr41YFJ2Md99lnA5IeNQvhe1Ipv7zqKY.LuGpK0nuUjRDaQKe",
+    "role": "user",
+    "createdAt": "2026-05-07T07:01:55.441Z"
+  }
+]
