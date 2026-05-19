@@ -17,10 +17,23 @@ const allowedOrigins = (process.env.CLIENT_URL || "http://localhost:5173")
   .map((origin) => origin.trim())
   .filter(Boolean);
 
+function isAllowedOrigin(origin) {
+  if (!origin || allowedOrigins.includes(origin)) {
+    return true;
+  }
+
+  try {
+    const { hostname } = new URL(origin);
+    return hostname.endsWith(".onrender.com");
+  } catch {
+    return false;
+  }
+}
+
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin)) {
         return callback(null, true);
       }
       return callback(new Error("CORS origin ruxsat etilmagan"));
@@ -49,16 +62,61 @@ app.use((req, res) => {
   res.status(404).json({ message: "Endpoint topilmadi" });
 });
 
-async function normalizeAdminPassword() {
+async function ensureDemoAccounts() {
   const users = await readJSON("users.json");
-  const admin = users.find((user) => user.email === "admin@gmail.com");
-  if (admin && !admin.password.startsWith("$2")) {
-    admin.password = await bcrypt.hash(admin.password, 10);
+
+  const demoAccounts = [
+    {
+      name: "Administrator",
+      email: "admin@gmail.com",
+      password: "admin123",
+      role: "admin",
+      createdAt: "2026-01-01T09:00:00.000Z"
+    },
+    {
+      name: "Demo User",
+      email: "user@gmail.com",
+      password: "user123",
+      role: "user",
+      createdAt: "2026-05-07T07:01:55.441Z"
+    }
+  ];
+
+  let changed = false;
+
+  for (const account of demoAccounts) {
+    const user = users.find((item) => item.email.toLowerCase() === account.email);
+    if (!user) {
+      users.push({
+        id: String(users.length ? Math.max(...users.map((item) => Number(item.id) || 0)) + 1 : 1),
+        name: account.name,
+        email: account.email,
+        password: await bcrypt.hash(account.password, 10),
+        role: account.role,
+        createdAt: account.createdAt
+      });
+      changed = true;
+      continue;
+    }
+
+    const passwordMatches = user.password?.startsWith("$2")
+      ? await bcrypt.compare(account.password, user.password)
+      : user.password === account.password;
+
+    if (!passwordMatches || user.role !== account.role || user.name !== account.name) {
+      user.name = account.name;
+      user.password = await bcrypt.hash(account.password, 10);
+      user.role = account.role;
+      changed = true;
+    }
+  }
+
+  if (changed) {
     await writeJSON("users.json", users);
   }
 }
 
-normalizeAdminPassword()
+ensureDemoAccounts()
   .then(() => {
     app.listen(PORT, () => console.log(`Sardor-Ekitob.uz API http://localhost:${PORT} da ishga tushdi`));
   })

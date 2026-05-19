@@ -2,8 +2,10 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { nextId, readJSON, writeJSON } from "../utils/fileDB.js";
 
+const JWT_SECRET = process.env.JWT_SECRET || "sardorbek-demo-secret";
+
 const signToken = (user) =>
-  jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: "7d" });
+  jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, { expiresIn: "7d" });
 
 const publicUser = (user) => {
   const { password, ...safe } = user;

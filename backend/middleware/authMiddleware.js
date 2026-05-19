@@ -1,6 +1,8 @@
 import jwt from "jsonwebtoken";
 import { readJSON } from "../utils/fileDB.js";
 
+const JWT_SECRET = process.env.JWT_SECRET || "sardorbek-demo-secret";
+
 export async function authMiddleware(req, res, next) {
   try {
     const header = req.headers.authorization;
@@ -9,7 +11,7 @@ export async function authMiddleware(req, res, next) {
     }
 
     const token = header.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, JWT_SECRET);
     const users = await readJSON("users.json");
     const user = users.find((item) => item.id === decoded.id);
 
